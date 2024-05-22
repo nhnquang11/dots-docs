@@ -6,9 +6,9 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/nhnquang11/dots',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/nhnquang11/dots-docs',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Dots © 2024',
   },
 }
 
