@@ -1,23 +1,22 @@
-# Nextra Docs Template 
+# Documentation for Dots
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Welcome to the official documentation for [Dots](https://dots-the-chaos.fly.dev) - a powerful blog application designed to provide a seamless and efficient blogging experience. This repository contains all the necessary information and instructions to help you set up, customize, and use the Dots application.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+## Getting Started
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+To get started with Dots, you will need to clone the repository and install the necessary dependencies. Follow the steps below to set up your development environment.
 
-## Quick Start
+1. Clone the repository
 
-Click the button to clone this repository and deploy it on Vercel:
+2. Install dependencies
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+```bash
+  npm install
+```
 
-## Local Development
+3. Run the server
 
-First, run `pnpm i` to install the dependencies.
+```bash
+  npm run dev
+```
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
