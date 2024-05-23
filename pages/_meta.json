@@ -1,7 +1,15 @@
 {
   "index": "Introduction",
+  "-- Design": {
+    "type": "separator",
+    "title": "Design"
+  },
   "ui-design": "UI Design",
   "database-design": "Database Design",
+  "-- Tutorials": {
+    "type": "separator",
+    "title": "Tutorials"
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
