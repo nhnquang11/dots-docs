@@ -1,0 +1,77 @@
+# Get Started
+
+Dots can be built and run locally by following the steps below.
+
+## Table of contents
+
+1. [Fork the project](#1-fork-the-project)
+2. [Setup environment variables](#2-setup-environment-variables)
+  - 2.1. [Backend](#21-backend)
+  - 2.2. [Frontend](#22-frontend)
+3. [Build and run](#3-build-and-run)
+  - 3.1. [Backend](#31-backend)
+  - 3.2. [Frontend](#32-frontend)
+  - 3.3. [Build](#33-build)
+
+import { Steps } from 'nextra/components'
+ 
+<Steps>
+### 1. Fork the project
+
+- Fork the [Dots repository](https://github.com/nhnquang11/dots) to your own GitHub account.
+- Update information in `package.json` file.
+
+### 2. Setup environment variables
+
+#### 2.1. Backend
+
+Change directory to `/backend` folder from the root directory of the project. Copy `.env.example` to `.env` and fill in the environment variables.
+
+**MongoDB variables:** Follow the instructions provided in the [MongoDB Atlas (Cloud)](https://docs.atlas.mongodb.com/getting-started/) to setup the database and get the variable.
+
++ `MONGO_URI`: The URI for connecting to your MongoDB database.
+
+**Cloudinary variables:** To set up Cloudinary configuration variables, visit the [Cloudinary Console](https://console.cloudinary.com/) to retrieve your Cloud Name, API Key, and API Secret. Then, construct the `CLOUDINARY_URL` using these credentials.
+
++ `CLOUDINARY_URL`: The base URL for Cloudinary API access.
++ `CLOUDINARY_CLOUD_NAME`: The cloud name for your Cloudinary account.
++ `CLOUDINARY_API_KEY`: The API key for your Cloudinary account.
++ `CLOUDINARY_API_SECRET`: The API secret for your Cloudinary account.
+
+**Other variables:** 
+
++ `PORT`: The port number on which your server will run.
++ `SECRET`: The secret key used for signing JWT tokens.
+
+#### 2.2. Frontend
+
+Change directory to `/frontend` folder from the root directory of the project. Copy `.env.example` to `.env` and fill in the environment variables.
+
+**Firebase variables:** Go to your Firebase project settings and copy the config. Then, add the following variables to the project. (See more [here](https://firebase.google.com/docs/web/setup#config-object))
+
+    + `VITE_FIREBASE_API_KEY`: The API key of your Firebase project.
+    + `VITE_FIREBASE_AUTH_DOMAIN`: The authentication domain for your Firebase project.
+    + `VITE_FIREBASE_PROJECT_ID`: The unique identifier for your Firebase project.
+    + `VITE_FIREBASE_STORAGE_BUCKET`: The storage bucket URL for your Firebase project.
+    + `VITE_FIREBASE_MESSAGING_SENDER_ID`: The sender ID for Firebase Cloud Messaging.
+    + `VITE_FIREBASE_APP_ID`: The app ID of your Firebase project.
+    + `VITE_FIREBASE_MEASUREMENT_ID`: The measurement ID for Firebase Analytics.
+
+### 3. Build and run
+
+#### 3.1. Backend
+
+Change directory to `/backend` folder from the root directory of the project. In the command line, `npm install` to install packages and `npm run dev` to run the development server.
+
+#### 3.2. Frontend
+
+Change directory to `/frontend` folder from the root directory of the project. In the command line, `npm install` to install packages and `npm run dev` to run the React application.
+
+#### 3.3. Build
+
+Serve static files from the backend by copying the frontend production build (the dist directory) to the root of the backend repository. Run the following command in the `/backend` folder to build:
+
+``` bash
+npm run build:ui
+```
+</Steps>

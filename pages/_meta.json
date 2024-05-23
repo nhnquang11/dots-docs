@@ -1,14 +1,27 @@
 {
   "index": "Introduction",
+  "-- Tutorials": {
+    "type": "separator",
+    "title": "Tutorials"
+  },
+  "get-started": "Get Started",
+  "deployment": "Deployment",
   "-- Design": {
     "type": "separator",
     "title": "Design"
   },
   "ui-design": "UI Design",
   "database-design": "Database Design",
-  "-- Tutorials": {
+  "-- More": {
     "type": "separator",
-    "title": "Tutorials"
+    "title": "More"
+  },
+  "dots-api": "API",
+  "contribution": "Contribution",
+  "dots-link": {
+    "title": "Dots ↗",
+    "href": "https://dots-the-chaos.fly.dev/",
+    "newWindow": true
   },
   "contact": {
     "title": "Contact ↗",

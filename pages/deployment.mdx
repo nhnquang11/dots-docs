@@ -1,0 +1,71 @@
+# Deployment
+
+import { Callout } from 'nextra/components'
+ 
+<Callout type="info" emoji="ℹ️">
+  Note that you may need to give your credit card number to Fly.io even if you are using only the free tier! 
+</Callout>
+
+From the root directory of the project, change directory to the `/backend` folder and follow these following steps:
+
+1. Install their flyctl executable following [this guide](https://fly.io/docs/hands-on/install-flyctl/). Then, [create a Fly.io account](https://fly.io/docs/hands-on/sign-up-sign-in/).
+
+2. Authenticate via the CLI with the command:
+
+  ``` bash
+  fly auth login
+  ```
+
+3. Initialize an app with the following command:
+
+  ``` bash
+  fly launch
+  ```
+
+4. Give the app a name and pick a region where it will be run. Then Fly.io creates a file fly.toml for configuration, add a small addition to this file:
+
+  ``` bash
+  [build]
+
+  [env]
+    PORT = "3000" # add this
+
+  [http_service]
+    internal_port = 3000 # ensure that this is same as PORT
+    force_https = true
+    auto_stop_machines = true
+    auto_start_machines = true
+    min_machines_running = 0
+    processes = ["app"]
+  ```
+
+5. Set encrypted secrets for application in the CLI following the following template. Read more information about these variables in the [Get Started](/get-started) section.
+
+  ```
+  fly secrets set VITE_FIREBASE_API_KEY=<your_Firebase_API_key_here>
+  fly secrets set VITE_FIREBASE_AUTH_DOMAIN=<your_Firebase_auth_domain_here>
+  fly secrets set VITE_FIREBASE_PROJECT_ID=<your_Firebase_project_ID_here>
+  fly secrets set VITE_FIREBASE_STORAGE_BUCKET=<your_Firebase_storage_bucket_here>
+  fly secrets set VITE_FIREBASE_MESSAGING_SENDER_ID=<your_Firebase_messaging_sender_ID_here>
+  fly secrets set VITE_FIREBASE_APP_ID=<your_Firebase_app_ID_here>
+  fly secrets set VITE_FIREBASE_MEASUREMENT_ID=<your_Firebase_measurement_ID_here>
+  fly secrets set MONGO_URI=<your_MongoDB_URI_here>
+  fly secrets set PORT=<your_server_port_here>
+  fly secrets set SECRET=<your_secret_key_here>
+  fly secrets set CLOUDINARY_URL=<your_Cloudinary_URL_here>
+  fly secrets set CLOUDINARY_CLOUD_NAME=<your_Cloudinary_cloud_name_here>
+  fly secrets set CLOUDINARY_API_KEY=<your_Cloudinary_API_key_here>
+  fly secrets set CLOUDINARY_API_SECRET=<your_Cloudinary_API_secret_here>
+  ```
+
+6. Run the following command to deploy the whole app to the internet
+
+  ``` bash
+  npm run deploy:full
+  ```
+
+7. If all goes well, the app should now be up and running. View server logs with the following command:
+
+  ``` bash
+  npm run logs:prod
+  ```
