@@ -1,8 +1,17 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
+const logo = (
+  <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+    <div>
+      <img width={36} height={36} src="/dots.png"></img>
+    </div>
+    <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>Dots</p>
+  </div>
+);
+
 const config: DocsThemeConfig = {
-  logo: <span>Dots</span>,
+  logo,
   project: {
     link: 'https://github.com/nhnquang11/dots',
   },

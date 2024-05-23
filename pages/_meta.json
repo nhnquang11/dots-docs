@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "ui-design": "UI Design",
+  "database-design": "Database Design",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
