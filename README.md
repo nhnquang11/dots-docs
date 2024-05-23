@@ -1,6 +1,8 @@
 # Documentation for Dots
 
-Welcome to the official documentation for [Dots](https://dots-the-chaos.fly.dev) - a powerful blog application designed to provide a seamless and efficient blogging experience. This repository contains all the necessary information and instructions to help you set up, customize, and use the Dots application.
+Welcome to the official documentation for [Dots](https://github.com/nhnquang11/dots) - a powerful blog application designed to provide a seamless and efficient blogging experience. This repository contains all the necessary information and instructions to help you set up, customize, and use the Dots application.
+
+![](public/home.svg)
 
 ## Getting Started
 
